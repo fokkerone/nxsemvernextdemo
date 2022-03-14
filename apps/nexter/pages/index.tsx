@@ -11,7 +11,7 @@ export function Index() {
       <div className="wrapper">
         <div className="container">
           <div id="welcome">
-            <h1>Fokker sagt Hello Hombre</h1>
+            <h1>Fokker sagt Hello wrgerterert</h1>
           </div>
 
           <div id="hero" className="rounded">
