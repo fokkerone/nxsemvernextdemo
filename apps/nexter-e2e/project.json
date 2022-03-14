@@ -1,0 +1,34 @@
+{
+  "root": "apps/nexter-e2e",
+  "sourceRoot": "apps/nexter-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/nexter-e2e/cypress.json",
+        "devServerTarget": "nexter:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "nexter:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/nexter-e2e/**/*.{js,ts}"]
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "commitMessageFormat": "chore(${projectName}): release version ${version}"
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["nexter"]
+}

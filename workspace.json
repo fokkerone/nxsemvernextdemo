@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "nexter": "apps/nexter",
+    "nexter-e2e": "apps/nexter-e2e"
+  }
+}
